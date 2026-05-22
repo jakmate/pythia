@@ -38,6 +38,7 @@ wget
 git
 btop
 unattended-upgrades
+powertop
 ```
 
 ## Networking
@@ -45,6 +46,7 @@ unattended-upgrades
 ```bash
 openssh-server
 tailscale
+ufw
 ```
 
 ---
@@ -201,13 +203,13 @@ systemctl list-units --type=service
 
 # TODO
 
-- [ ] Connection back to PC
+- [ ] Connection back to PC (samba?)
 - [ ] Add monitoring
-- [ ] Harden
+- [ ] Harden ssh
 - [ ] Implement backups
 - [ ] Define restore procedure
 - [ ] Replace single drive with RAID or NAS
-- [ ] Optimize power consumption
+- [ ] Get rid of error logs from atheros
 
 ---
 
@@ -216,3 +218,6 @@ systemctl list-units --type=service
 | Date | Change |
 |---|---|
 | 2026-05-18 | Initial documentation created |
+| 2026-05-20 | Powertop --auto-tune service added |
+| 2026-05-22 | Edit /etc/default/grub to turn off display after 5 minutes |
+| 2026-05-22 | Add ufw |
