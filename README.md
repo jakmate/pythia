@@ -11,7 +11,7 @@
 | OS | Debian 13 'trixie' |
 | Container Runtime | Docker + Docker Compose |
 | Remote Access | Tailscale VPN |
-| SSH Access | Enabled (LAN + Tailscale) |
+| SSH Access | Enabled Tailscale |
 
 ---
 
