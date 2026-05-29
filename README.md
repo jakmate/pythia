@@ -220,5 +220,6 @@ systemctl list-units --type=service
 | 2026-05-20 | Powertop --auto-tune service added |
 | 2026-05-22 | Edit /etc/default/grub to turn off display after 5 minutes |
 | 2026-05-22 | Add ufw |
+| 2026-05-27 | Add updating of docker images via service + timer |
 | 2026-05-29 | Edit /etc/default/grub pcie_aspm=off, got rid off error logs from atheros |
 | 2026-05-29 | Disable mic, camera and touchpad in BIOS |
