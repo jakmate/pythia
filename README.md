@@ -36,9 +36,15 @@
 curl
 wget
 git
-btop
 unattended-upgrades
+```
+
+## Monitoring
+
+```bash
+btop
 powertop
+smartmontools
 ```
 
 ## Networking
@@ -223,3 +229,4 @@ systemctl list-units --type=service
 | 2026-05-27 | Add updating of docker images via service + timer |
 | 2026-05-29 | Edit /etc/default/grub pcie_aspm=off, got rid off error logs from atheros |
 | 2026-05-29 | Disable mic, camera and touchpad in BIOS |
+| 2026-05-31 | Enable SMART in BIOS, install smartmontools |
