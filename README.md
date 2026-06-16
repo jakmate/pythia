@@ -37,6 +37,7 @@ curl
 wget
 git
 unattended-upgrades
+rsync
 ```
 
 ## Monitoring
@@ -71,6 +72,10 @@ docker-compose
 ```text
 /
 ├── containers/
+│   ├── audiomuse-ai/
+│   │   ├── docker-compose.yml
+│   │   └── .env
+│   │
 │   ├── immich/
 │   │   ├── docker-compose.yml
 │   │   ├── .env
@@ -82,7 +87,8 @@ docker-compose
 │
 └── data/
     ├── music/
-    │   └── Artists/
+    │   └── Artist/
+    │       └── Album/
     │
     └── library/
 ```
@@ -97,6 +103,7 @@ docker-compose
 |---|---|---|
 | Navidrome | Music Streaming Server | 4533 |
 | Immich | Photo & Video Backup | 2283 |
+| Audiomuse AI | Music | 8000 |
 
 ## Start Services
 
@@ -128,6 +135,7 @@ docker ps
 ```bash
 docker logs immich_server
 docker logs navidrome
+docker logs audiomuse_ai
 ```
 
 ---
@@ -209,6 +217,7 @@ systemctl list-units --type=service
 
 # TODO
 
+- [ ] Remove audiomuse ai port access for database and ai
 - [ ] Connection back to PC (samba?)
 - [ ] Add monitoring
 - [ ] Harden ssh
@@ -230,3 +239,5 @@ systemctl list-units --type=service
 | 2026-05-29 | Edit /etc/default/grub pcie_aspm=off, got rid off error logs from atheros |
 | 2026-05-29 | Disable mic, camera and touchpad in BIOS |
 | 2026-05-31 | Enable SMART in BIOS, install smartmontools |
+| 2026-06-06 | Add audiomuse-ai container and plugin for navidrome |
+| 2026-06-16 | Add rsync |
