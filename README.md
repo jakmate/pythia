@@ -80,6 +80,9 @@ docker-compose
 │   │   ├── docker-compose.yml
 │   │   ├── .env
 │   │   └── postgres/
+│   ├── maloja/
+│   │   ├── docker-compose.yml
+│   │   └── data/
 │   │
 │   └── navidrome/
 │       ├── docker-compose.yml
@@ -104,6 +107,7 @@ docker-compose
 | Navidrome | Music Streaming Server | 4533 |
 | Immich | Photo & Video Backup | 2283 |
 | Audiomuse AI | Music | 8000 |
+| Maloja | Scrobbling | 42010 |
 
 ## Start Services
 
@@ -136,6 +140,7 @@ docker ps
 docker logs immich_server
 docker logs navidrome
 docker logs audiomuse_ai
+docker logs maloja
 ```
 
 ---
@@ -241,3 +246,4 @@ systemctl list-units --type=service
 | 2026-05-31 | Enable SMART in BIOS, install smartmontools |
 | 2026-06-06 | Add audiomuse-ai container and plugin for navidrome |
 | 2026-06-16 | Add rsync |
+| 2026-08-15 | Add maloja |
